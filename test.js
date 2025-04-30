@@ -1,3 +1,6 @@
+let tId;
+let timeoutId;
+
 function ShowAlert() {
   alert("Hello world!!");
 }
@@ -20,7 +23,7 @@ function createElementsFromChunks(chunks) {
     container.appendChild(newElement); // コンテナに追加
   });
 }
-let tId;
+
 // 10秒ごとにハイライト
 async function logSpanTagsWithDelay() {
   // 対象の要素を取得
