@@ -11,8 +11,9 @@ body {
   writing-mode: vertical-rl;
   column-count: 2;
   column-rule: solid 1px;
-  column-gap: 25px;
-  width: 90vw; height: 42vh;
+  column-gap: 3vw;
+  width: 98vw; height: 65vw;
+  line-height: 2.4vw;
   text-align: left;
   display: none;
   column-fill: auto;
