@@ -7,10 +7,14 @@ body {
   font-family: "Hiragino Kaku Gothic ProN";
 }
 
+
+.mark {
+  background: linear-gradient(transparent 0%, #f6ff5f 0%);
+}
 mark {
-    background-color: #FF0;
-    color: #000;
-    padding: 0.2em;
+  background-color: #FF0;
+  color: #000;
+  padding: 0.2em;
 }
 
 a {

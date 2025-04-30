@@ -10,8 +10,13 @@
 <body>
   <script>
     function ShowAlert() {
-    alert("Hello world!!");
-  }
+      alert("Hello world!!");
+    }
+
+    function start() {
+      let Textarea = document.getElementById('name');
+      Textarea.classList.add('mark');
+    }
   </script>
   <header>
     <div class="container">
@@ -35,7 +40,7 @@
       name="name">
       </textarea>
       <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
+        <button type="button" class="btn" onclick="start()">START</button>
         <p>or</p>
         <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
         <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
