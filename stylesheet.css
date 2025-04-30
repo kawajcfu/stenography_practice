@@ -15,6 +15,7 @@ body {
   width: 900px; height: 625px;
   text-align: left;
   display: none;
+  column-fill: auto;
 }
 
 .mark {
