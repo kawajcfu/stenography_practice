@@ -14,12 +14,13 @@
     }
 
     function start() {
-      let Textarea = document.getElementById('Genkou');
+      let Textarea = document.getElementById('name');
+      let Genkou = document.getElementById('Genkou');
       console.log(Textarea);
       let new_element = document.createElement('p');
       new_element.textContent = '追加テキスト';
       console.log(new_element);
-      textbox_element.appendChild(new_element);
+      Genkou.appendChild(new_element);
     }
   </script>
   <header>
