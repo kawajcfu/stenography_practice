@@ -20,7 +20,7 @@ function createElementsFromChunks(chunks) {
     container.appendChild(newElement); // コンテナに追加
   });
 }
-
+let tId;
 // 10秒ごとにハイライト
 async function logSpanTagsWithDelay() {
   // 対象の要素を取得
@@ -38,7 +38,7 @@ async function logSpanTagsWithDelay() {
     for (let i = 0; i < spanTags.length; i++) {
       console.log(spanTags[i].textContent); // spanタグのテキストを出力
       spanTags[i].classList.add('mark');
-      await new Promise(resolve => setTimeout(resolve, 1000)); // 10秒待機
+      await new Promise(resolve => tId = setTimeout(resolve, 1000)); // 10秒待機
       spanTags[i].classList.remove('mark');
     }
 
