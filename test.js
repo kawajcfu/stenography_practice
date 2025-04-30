@@ -61,6 +61,7 @@ function displayTime() {
 }
 
 function start() {
+  clearTimeout(tId);
   let Textarea = document.getElementById('textarea');
   let texttext = Textarea.value.trim();
   let Genkou = document.getElementById('Genkou');
