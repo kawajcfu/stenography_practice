@@ -80,4 +80,5 @@ function start() {
 function resetting() {
   document.getElementById('Genkou').style.display = "none";
   document.getElementById('textarea').style.display = "";
+  clearTimeout(timeoutID);
 }
