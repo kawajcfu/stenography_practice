@@ -5,7 +5,7 @@ function ShowAlert() {
   alert("Hello world!!");
 }
 // 文字を分割する
-function splitStringIntoChunks(inputString, chunkSize = 5) {
+function splitStringIntoChunks(inputString, chunkSize = 15) {
   const result = [];
   for (let i = 0; i < inputString.length; i += chunkSize) {
     result.push(inputString.slice(i, i + chunkSize));
