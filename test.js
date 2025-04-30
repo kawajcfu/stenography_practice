@@ -65,12 +65,13 @@ function start() {
   let Textarea = document.getElementById('textarea');
   Textarea.style.display = "none";
   Genkou.style.display = "null";
-  Textarea.value = "";
   let texttext = Textarea.value.trim();
 
   // 文字列を分割
+  if (Genkou.childElementCount == 0) {
   const chunks = splitStringIntoChunks(texttext);
   createElementsFromChunks(chunks);
+  }
   logSpanTagsWithDelay();
   Textarea.style.display = "null";
 }
