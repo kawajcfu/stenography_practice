@@ -11,8 +11,9 @@ body {
   writing-mode: vertical-rl;
   column-count: 2;
   column-rule: solid 1px;
-  column-gap: 2.5rem;
-  width: 100vw; height: 500px 
+  column-gap: 25px;
+  width: 1200px; height: 825px;
+  text-align: center;
 }
 
 .mark {
