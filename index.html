@@ -14,8 +14,10 @@
     }
 
     function start() {
-      let Textarea = document.getElementById('name');
-      Textarea.classList.add('mark');
+      let Textarea = document.getElementById('Genkou');
+      let new_element = document.createElement('p');
+      new_element.textContent = '追加テキスト';
+      textbox_element.appendChild(new_element);
     }
   </script>
   <header>
@@ -46,6 +48,7 @@
         <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
         <button type="button" onclick="ShowAlert()">ここをクリック</button>
       </div>
+      <div id="genkou"></div>
     </div>
   </div>
   <div class="lesson-wrapper">
