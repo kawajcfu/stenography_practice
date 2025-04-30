@@ -9,6 +9,10 @@ body {
 
 .genkou {
   writing-mode: vertical-rl;
+  column-count: 2;
+  column-rule: solid 1px;
+  column-gap: 2.5rem;
+  width: 100vw; height: 500px 
 }
 
 .mark {

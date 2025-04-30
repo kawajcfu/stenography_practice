@@ -20,6 +20,7 @@ function createElementsFromChunks(chunks) {
   chunks.forEach(chunk => {
     const newElement = document.createElement("span"); // 新しいHTML要素（段落）を作成
     newElement.textContent = chunk; // 分割された文字列を設定
+    newElement.style = "font-size: 20px"
     container.appendChild(newElement); // コンテナに追加
   });
 }
