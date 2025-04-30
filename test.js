@@ -19,8 +19,6 @@ function createElementsFromChunks(chunks) {
     newElement.textContent = chunk; // 分割された文字列を設定
     container.appendChild(newElement); // コンテナに追加
   });
-
-  document.body.appendChild(container); // ページのbodyにコンテナを追加
 }
 
 // 10秒ごとにハイライト
