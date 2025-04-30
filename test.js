@@ -61,17 +61,18 @@ function displayTime() {
 }
 
 function start() {
-  let Genkou = document.getElementById('Genkou');
   let Textarea = document.getElementById('textarea');
+  let texttext = Textarea.value.trim();
+  let Genkou = document.getElementById('Genkou');
   Textarea.style.display = "none";
   Genkou.style.display = "";
-  let texttext = Textarea.value.trim();
+  while(Genkou.firstChild){
+    Genkou.removeChild(Genkou.firstChild)
+  }
 
   // 文字列を分割
-  if (Genkou.childElementCount == 0) {
   const chunks = splitStringIntoChunks(texttext);
   createElementsFromChunks(chunks);
-  }
   logSpanTagsWithDelay();
   Textarea.style.display = "null";
 }
