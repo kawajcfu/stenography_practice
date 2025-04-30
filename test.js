@@ -27,6 +27,8 @@ async function logSpanTagsWithDelay() {
   const targetElement = document.getElementById('Genkou');
 
   if (targetElement) {
+    let timeoutID;
+
     // 対象要素内のすべての<span>タグを取得
     const spanTags = targetElement.getElementsByTagName("span");
     startTime = Date.now();
@@ -44,6 +46,7 @@ async function logSpanTagsWithDelay() {
   } else {
     console.warn(`ID の要素が見つかりません。`);
   }
+  clearTimeout(timeoutID);
 }
 
 // 時間を表示する関数
