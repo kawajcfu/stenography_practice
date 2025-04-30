@@ -70,7 +70,7 @@ function start() {
   let texttext = Textarea.value.trim();
   let Genkou = document.getElementById('Genkou');
   Textarea.style.display = "none";
-  Genkou.style.display = "";
+  Genkou.style.display = "block";
   while(Genkou.firstChild){
     Genkou.removeChild(Genkou.firstChild)
   }
