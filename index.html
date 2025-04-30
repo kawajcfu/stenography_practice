@@ -15,10 +15,12 @@
 
     function start() {
       let Textarea = document.getElementById('name');
+      let texttext = Textarea.value.trim();
+      console.log(texttext);
       let Genkou = document.getElementById('Genkou');
       console.log(Textarea);
       let new_element = document.createElement('p');
-      new_element.textContent = '追加テキスト';
+      new_element.textContent = texttext;
       console.log(new_element);
       Genkou.appendChild(new_element);
     }
