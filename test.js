@@ -38,7 +38,7 @@ async function logSpanTagsWithDelay() {
     for (let i = 0; i < spanTags.length; i++) {
       console.log(spanTags[i].textContent); // spanタグのテキストを出力
       spanTags[i].classList.add('mark');
-      await new Promise(resolve => setTimeout(resolve, 10000)); // 10秒待機
+      await new Promise(resolve => setTimeout(resolve, 1000)); // 10秒待機
       spanTags[i].classList.remove('mark');
     }
 
@@ -47,7 +47,7 @@ async function logSpanTagsWithDelay() {
     console.warn(`ID の要素が見つかりません。`);
   }
   clearTimeout(timeoutID);
-  
+  document.getElementById('Genkou').style.display = "none";
 }
 
 // 時間を表示する関数
@@ -62,18 +62,15 @@ function displayTime() {
 }
 
 function start() {
-  document.getElementById('textarea').style.display = "none";
-  document.getElementById('Genkou').style.display = "null";
-  let Textarea = document.getElementById('textarea');
-  let texttext = Textarea.value.trim();
-  console.log(texttext);
-
   let Genkou = document.getElementById('Genkou');
-  console.log(Genkou);
+  let Textarea = document.getElementById('textarea');
+  Textarea.style.display = "none";
+  Genkou.style.display = "null";
+  let texttext = Textarea.value.trim();
+
   // 文字列を分割
   const chunks = splitStringIntoChunks(texttext);
   createElementsFromChunks(chunks);
   logSpanTagsWithDelay();
-  document.getElementById('Genkou').style.display = "none";
-  document.getElementById('textarea').style.display = "null";
+  Textarea.style.display = "null";
 }
