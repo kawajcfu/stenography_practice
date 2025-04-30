@@ -7,6 +7,9 @@ body {
   font-family: "Hiragino Kaku Gothic ProN";
 }
 
+.genkou {
+  writing-mode: vertical-rl;
+}
 
 .mark {
   background: linear-gradient(transparent 0%, #f6ff5f 0%);
