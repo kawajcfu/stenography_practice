@@ -47,6 +47,7 @@ async function logSpanTagsWithDelay() {
     console.warn(`ID の要素が見つかりません。`);
   }
   clearTimeout(timeoutID);
+  
 }
 
 // 時間を表示する関数
@@ -61,6 +62,8 @@ function displayTime() {
 }
 
 function start() {
+  document.getElementById('textarea').style.display = "none";
+  document.getElementById('Genkou').style.display = "null";
   let Textarea = document.getElementById('textarea');
   let texttext = Textarea.value.trim();
   console.log(texttext);
@@ -71,4 +74,6 @@ function start() {
   const chunks = splitStringIntoChunks(texttext);
   createElementsFromChunks(chunks);
   logSpanTagsWithDelay();
+  document.getElementById('Genkou').style.display = "none";
+  document.getElementById('textarea').style.display = "null";
 }
