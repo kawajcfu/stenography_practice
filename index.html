@@ -12,17 +12,60 @@
     function ShowAlert() {
       alert("Hello world!!");
     }
+    // 文字を分割する
+    function splitStringIntoChunks(inputString, chunkSize = 5) {
+      const result = [];
+      for (let i = 0; i < inputString.length; i += chunkSize) {
+        result.push(inputString.slice(i, i + chunkSize));
+      }
+      return result;
+    }
 
+    // 分割した文字列からHTML要素を作成して追加
+    function createElementsFromChunks(chunks) {
+      const container = document.getElementById("Genkou");
+
+      chunks.forEach(chunk => {
+        const newElement = document.createElement("span"); // 新しいHTML要素（段落）を作成
+        newElement.textContent = chunk; // 分割された文字列を設定
+        container.appendChild(newElement); // コンテナに追加
+      });
+
+      document.body.appendChild(container); // ページのbodyにコンテナを追加
+    }
+    // 10秒ごとにハイライト
+    async function logSpanTagsWithDelay() {
+      // 対象の要素を取得
+      const targetElement = document.getElementById('Genkou');
+
+      if (targetElement) {
+        // 対象要素内のすべての<span>タグを取得
+        const spanTags = targetElement.getElementsByTagName("span");
+
+        // 非同期で1つずつ処理
+        for (let i = 0; i < spanTags.length; i++) {
+          console.log(spanTags[i].textContent); // spanタグのテキストを出力
+          spanTags[i].classList.add('mark');
+          await new Promise(resolve => setTimeout(resolve, 10000)); // 10秒待機
+          spanTags[i].classList.remove('mark');
+        }
+
+        console.log("全ての<span>タグの処理が完了しました。");
+      } else {
+        console.warn(`ID の要素が見つかりません。`);
+      }
+    }
     function start() {
-      let Textarea = document.getElementById('name');
+      let Textarea = document.getElementById('textarea');
       let texttext = Textarea.value.trim();
       console.log(texttext);
+
       let Genkou = document.getElementById('Genkou');
-      console.log(Textarea);
-      let new_element = document.createElement('p');
-      new_element.textContent = texttext;
-      console.log(new_element);
-      Genkou.appendChild(new_element);
+      console.log(Genkou);
+      // 文字列を分割
+      const chunks = splitStringIntoChunks(texttext);
+      createElementsFromChunks(chunkes);
+      logSpanTagsWithDelay();
     }
   </script>
   <header>
@@ -43,11 +86,11 @@
       <p>Progateは<mark>オンラインプログラミング学習サービス</mark>です。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
       <textarea class="example"
       type="text"
-      id="name"
+      id="textarea"
       name="name">
       </textarea>
       <div class="btn-wrapper">
-        <button type="button" class="btn" onclick="start()">START</button>
+        <button type="button" class="btn signup" onclick="start()">START</button>
         <p>or</p>
         <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
         <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
