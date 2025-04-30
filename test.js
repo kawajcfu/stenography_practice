@@ -76,5 +76,5 @@ function start() {
 
 function resetting() {
   document.getElementById('Genkou').style.display = "none";
-  document.getElementById('textarea').style.display = "null";
+  document.getElementById('textarea').style.display = "";
 }
